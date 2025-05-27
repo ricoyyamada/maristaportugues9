@@ -1,81 +1,91 @@
 :root {
-  --duo-green: #58cc02;
-  --duo-dark-green: #1cb0f6;
-  --duo-yellow: #ffd600;
-  --duo-red: #ff4b4b;
-  --duo-bg: #f7fafd;
-  --duo-white: #fff;
-  --duo-gray: #e5e5e5;
+  --among-bg: #181924;
+  --among-panel: #23243a;
+  --among-red: #ff3b4e;
+  --among-yellow: #ffe347;
+  --among-cyan: #00e6e6;
+  --among-blue: #4d6aff;
+  --among-white: #fff;
+  --among-gray: #bdbdbd;
+  --among-green: #58cc02;
 }
 
 body {
-  background: var(--duo-bg);
-  font-family: "Nunito", Arial, sans-serif;
+  background: var(--among-bg);
+  font-family: 'Nunito', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  color: var(--among-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .duo-container {
   max-width: 420px;
-  margin: 24px auto;
-  background: var(--duo-white);
+  margin: 32px auto;
+  background: var(--among-panel);
   border-radius: 18px;
-  box-shadow: 0 4px 16px #d6e7e3;
+  box-shadow: 0 4px 24px #0a0a14;
   padding: 0 0 24px 0;
+  border: 3px solid var(--among-red);
 }
 
 header {
   text-align: center;
-  padding: 24px 16px 8px 16px;
+  padding: 28px 16px 8px 16px;
 }
 
 .marist-logo {
-  width: 180px;
+  width: 140px;
   max-width: 80vw;
   display: block;
   margin: 0 auto 12px auto;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 2px 8px #e0e0e0;
+  box-shadow: 0 2px 8px #0a0a14;
   object-fit: contain;
 }
 
 h1 {
-  font-size: 1.4em;
-  color: var(--duo-green);
+  font-size: 1.6em;
+  color: var(--among-yellow);
   margin: 0 0 4px 0;
+  text-shadow: 2px 2px 0 #000, 0 0 6px #ff3b4e;
+  letter-spacing: 1px;
 }
 
 .duo-subtitle {
-  color: var(--duo-dark-green);
+  color: var(--among-cyan);
   font-size: 1em;
   margin-bottom: 8px;
+  text-shadow: 1px 1px 0 #000;
 }
 
 .duo-intro {
-  font-size: 1.1em;
-  color: #222;
+  font-size: 1.15em;
+  color: var(--among-white);
   margin: 24px 0 20px 0;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
+  text-shadow: 1px 1px 0 #000;
 }
 
 main {
   padding: 0 16px;
 }
 
+/* Timer */
 #timer {
   font-size: 1.1em;
   font-weight: bold;
-  color: var(--duo-green);
-  background: #e9fbe5;
+  color: var(--among-yellow);
+  background: #23243a;
   border-radius: 10px;
   padding: 8px 0;
   text-align: center;
   margin-bottom: 8px;
   letter-spacing: 1px;
+  border: 2px solid var(--among-cyan);
 }
 
 /* Barra de progresso */
@@ -88,63 +98,70 @@ main {
   width: 100%;
   max-width: 340px;
   height: 18px;
-  background: #e0e0e0;
+  background: #181924;
   border-radius: 12px;
   margin: 0 auto;
   overflow: hidden;
-  box-shadow: 0 1px 4px #e0e0e0;
+  box-shadow: 0 1px 8px #000;
   position: relative;
+  border: 2px solid var(--among-blue);
 }
 
 #progress-bar-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #58cc02 60%, #1cb0f6 100%);
+  background: linear-gradient(90deg, var(--among-cyan) 0%, var(--among-yellow) 100%);
   border-radius: 12px 0 0 12px;
   transition: width 0.5s cubic-bezier(.4,1.4,.6,1);
 }
 
 #progress-text {
-  font-size: 0.98em;
-  color: #222;
+  font-size: 1em;
+  color: var(--among-yellow);
   margin-top: 4px;
-  font-weight: 600;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 #000;
 }
 
 /* Feedback motivacional */
 .feedback-acerto {
-  color: #388e3c;
-  background: #e6f9ea;
-  border: 2px solid #58cc02;
+  color: var(--among-green);
+  background: #23243a;
+  border: 2px solid var(--among-green);
   border-radius: 8px;
   padding: 8px 12px;
   display: inline-block;
   margin-bottom: 8px;
+  font-weight: bold;
   animation: pulse-green 0.6s;
+  text-shadow: 1px 1px 0 #000;
 }
 
 .feedback-excelencia {
-  color: #fff;
-  background: linear-gradient(90deg, #58cc02 60%, #1cb0f6 100%);
-  border: 2px solid #1cb0f6;
+  color: var(--among-yellow);
+  background: linear-gradient(90deg, var(--among-red) 40%, var(--among-yellow) 100%);
+  border: 2px solid var(--among-yellow);
   border-radius: 8px;
   padding: 8px 14px;
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
-  box-shadow: 0 2px 12px #b6e5b6;
+  box-shadow: 0 2px 12px #ff3b4e;
   animation: pulse-blue 0.7s;
+  text-shadow: 1px 1px 0 #000;
 }
 
 .feedback-erro {
-  color: #b71c1c;
-  background: #ffebee;
-  border: 2px solid #ff4b4b;
+  color: var(--among-red);
+  background: #23243a;
+  border: 2px solid var(--among-red);
   border-radius: 8px;
   padding: 8px 12px;
   display: inline-block;
   margin-bottom: 8px;
+  font-weight: bold;
   animation: shake 0.5s;
+  text-shadow: 1px 1px 0 #000;
 }
 
 @keyframes pulse-green {
@@ -153,9 +170,9 @@ main {
   100% { box-shadow: 0 0 0 0 #58cc0200; }
 }
 @keyframes pulse-blue {
-  0% { box-shadow: 0 0 0 0 #1cb0f640; }
-  70% { box-shadow: 0 0 0 12px #1cb0f600; }
-  100% { box-shadow: 0 0 0 0 #1cb0f600; }
+  0% { box-shadow: 0 0 0 0 #ffe34740; }
+  70% { box-shadow: 0 0 0 12px #ffe34700; }
+  100% { box-shadow: 0 0 0 0 #ffe34700; }
 }
 @keyframes shake {
   0% { transform: translateX(0); }
@@ -166,10 +183,11 @@ main {
 }
 
 .question {
-  font-size: 1.1em;
-  color: #222;
+  font-size: 1.15em;
+  color: var(--among-yellow);
   margin: 20px 0 10px 0;
-  font-weight: 600;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 #000;
 }
 
 .options {
@@ -178,34 +196,36 @@ main {
 
 .options label {
   display: block;
-  background: var(--duo-gray);
+  background: #23243a;
   border-radius: 12px;
   margin-bottom: 10px;
   padding: 12px 18px;
   font-size: 1em;
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
-  border: 2px solid transparent;
+  border: 2px solid #23243a;
   font-weight: 500;
   user-select: none;
   -webkit-user-select: none;
+  color: var(--among-white);
+  text-shadow: 1px 1px 0 #000;
+}
+
+.options label.selected {
+  background: var(--among-blue);
+  color: var(--among-yellow);
+  border-color: var(--among-yellow);
+  box-shadow: 0 2px 8px #4d6aff;
+}
+
+.options label.incorrect {
+  background: var(--among-red);
+  color: var(--among-yellow);
+  border-color: var(--among-yellow);
 }
 
 .options input[type="radio"] {
   display: none;
-}
-
-.options label.selected {
-  background: var(--duo-green);
-  color: var(--duo-white);
-  border-color: var(--duo-green);
-  box-shadow: 0 2px 8px #b6e5b6;
-}
-
-.options label.incorrect {
-  background: var(--duo-red);
-  color: var(--duo-white);
-  border-color: var(--duo-red);
 }
 
 .duo-btn {
@@ -213,31 +233,34 @@ main {
   max-width: 320px;
   margin: 0 auto 8px auto;
   display: block;
-  background: var(--duo-green);
-  color: var(--duo-white);
+  background: var(--among-blue);
+  color: var(--among-yellow);
   border: none;
   border-radius: 16px;
   font-size: 1.1em;
   font-weight: 700;
   padding: 14px 0;
   cursor: pointer;
-  box-shadow: 0 2px 8px #b6e5b6;
+  box-shadow: 0 2px 8px #4d6aff;
   transition: background 0.2s;
   outline: none;
+  text-shadow: 1px 1px 0 #000;
+  letter-spacing: 1px;
 }
 
 .duo-btn:active {
-  background: #399e07;
+  background: var(--among-cyan);
 }
 
 .duo-btn-red {
-  background: var(--duo-red);
+  background: var(--among-red);
+  color: var(--among-yellow);
   box-shadow: 0 2px 8px #ffb6b6;
 }
 
 .duo-btn-gray {
-  background: #bdbdbd;
-  color: #fff;
+  background: var(--among-gray);
+  color: #23243a;
   box-shadow: 0 2px 8px #e0e0e0;
 }
 .duo-btn-gray:active {
@@ -247,9 +270,10 @@ main {
 #result {
   font-size: 1.2em;
   font-weight: bold;
-  color: var(--duo-green);
+  color: var(--among-yellow);
   margin-top: 20px;
   text-align: center;
+  text-shadow: 1px 1px 0 #000;
 }
 
 /* Modal de confirmação de desistência */
@@ -257,7 +281,7 @@ main {
   display: none;
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.35);
+  background: rgba(24,25,36,0.85);
   z-index: 999;
   align-items: center;
   justify-content: center;
@@ -266,17 +290,21 @@ main {
   display: flex !important;
 }
 .modal-content {
-  background: #fff;
+  background: #23243a;
   padding: 28px 18px;
   border-radius: 12px;
   max-width: 320px;
   margin: auto;
   text-align: center;
-  box-shadow: 0 2px 12px #aaa;
+  box-shadow: 0 2px 12px #000;
+  border: 2px solid var(--among-red);
 }
 .modal-text {
   font-size: 1.1em;
   margin-bottom: 18px;
+  color: var(--among-yellow);
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #000;
 }
 
 @media (max-width: 500px) {
