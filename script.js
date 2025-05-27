@@ -768,17 +768,6 @@ function quitQuiz() {
   feedbackDiv.className = "";
   hideProgressBar();
 
-// Event listener para o botão Desistir
-document.getElementById('quitBtn').addEventListener('click', function(e) {
-  const confirmar = confirm('Tem certeza que deseja desistir do quiz? Seu progresso será perdido.');
-  if (!confirmar) {
-    e.preventDefault();
-    return;
-  }
-  // Ação ao desistir
-  window.location.reload();
-});
-
   resultDiv.innerHTML =
     "<span style='color:#ff4b4b;'>Você desistiu do desafio.</span><br>" +
     "Acertos: <b>" + correctAnswers + "</b><br>" +
@@ -793,11 +782,25 @@ function restartGame() {
   showStartScreen();
 }
 
-// Inicialização dos eventos
+// Modal de confirmação de desistência
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("startBtn").onclick = startQuiz;
   document.getElementById("nextBtn").onclick = checkAnswer;
   document.getElementById("restartBtn").onclick = restartGame;
-  document.getElementById("quitBtn").onclick = quitQuiz;
+
+  // Novo: mostrar modal ao clicar em "Desistir"
+  document.getElementById("quitBtn").onclick = function() {
+    document.getElementById("modal-desistir").classList.add("active");
+  };
+  // Confirmar desistência
+  document.getElementById("btnConfirmarDesistir").onclick = function() {
+    document.getElementById("modal-desistir").classList.remove("active");
+    quitQuiz();
+  };
+  // Cancelar desistência
+  document.getElementById("btnCancelarDesistir").onclick = function() {
+    document.getElementById("modal-desistir").classList.remove("active");
+  };
+
   showStartScreen();
 });
