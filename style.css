@@ -31,9 +31,8 @@ header {
   padding: 24px 16px 8px 16px;
 }
 
-/* Estilo padrão para a logo (desktop e tablets grandes) */
 .marist-logo {
-  width: 360px;
+  width: 180px;
   max-width: 80vw;
   display: block;
   margin: 0 auto 12px auto;
@@ -41,44 +40,6 @@ header {
   background: #fff;
   box-shadow: 0 2px 8px #e0e0e0;
   object-fit: contain;
-}
-
-/* Aumenta a logo no mobile até 768px */
-@media (max-width: 768px) {
-  .marist-logo {
-    width: 500px;
-    max-width: 90vw;
-    height: auto;
-    margin: 0 auto 20px auto;
-  }
-}
-
-/* Ajuste para telas bem pequenas (até 500px) */
-@media (max-width: 500px) {
-  .duo-container {
-    max-width: 98vw;
-    margin: 8px;
-    padding: 0 0 10px 0;
-    border-radius: 0;
-  }
-  main {
-    padding: 0 4vw;
-  }
-  h1 {
-    font-size: 1.1em;
-  }
-  .marist-logo {
-    width: 90px;
-    max-width: 90vw;
-    margin-bottom: 8px;
-  }
-  #progress-bar {
-    max-width: 90vw;
-    height: 14px;
-  }
-  #progress-text {
-    font-size: 0.93em;
-  }
 }
 
 h1 {
@@ -289,4 +250,58 @@ main {
   color: var(--duo-green);
   margin-top: 20px;
   text-align: center;
+}
+
+/* Modal de confirmação de desistência */
+#modal-desistir {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.35);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+#modal-desistir.active {
+  display: flex !important;
+}
+.modal-content {
+  background: #fff;
+  padding: 28px 18px;
+  border-radius: 12px;
+  max-width: 320px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 2px 12px #aaa;
+}
+.modal-text {
+  font-size: 1.1em;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 500px) {
+  .duo-container {
+    max-width: 98vw;
+    margin: 8px;
+    padding: 0 0 10px 0;
+    border-radius: 0;
+  }
+  main {
+    padding: 0 4vw;
+  }
+  h1 {
+    font-size: 1.1em;
+  }
+  .marist-logo {
+    width: 90px;
+    max-width: 90vw;
+    margin-bottom: 8px;
+  }
+  #progress-bar {
+    max-width: 90vw;
+    height: 14px;
+  }
+  #progress-text {
+    font-size: 0.93em;
+  }
 }
