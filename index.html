@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Escape Room Português</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="duo-container">
+    <header>
+      <!-- Logotipo Marista -->  
+      <img
+        src="https://craal.org.br/wp-content/uploads/2019/07/LOGO-MARISTA-1024x576.jpg"
+        alt="Logo Marista"
+        class="marist-logo"
+      />
+      <h1>Escape Room 9ºF</h1>
+      <p class="duo-subtitle">Professor Joelson Beltrão</p>
+    </header>
+    <main>
+      <!-- Tela de abertura -->
+      <div id="start-screen">
+        <p class="duo-intro">
+          Bem-vindo(a)!
+          Valentina, Taíla, Isabela e Antonella, convidam você a testar 
+          seus conhecimentos e escapar da recuperação...
+          Responda todas as perguntas corretamente. 
+        </p>
+        <button id="startBtn" class="duo-btn">Começar</button>
+      </div>
+      <!-- Cronômetro -->
+      <div id="timer" style="display: none">
+        <span>⏱️</span> <span id="time">00:00</span>
+      </div>
+      <!-- Barra de progresso -->
+      <div id="progress-bar-container" style="display:none;">
+        <div id="progress-bar">
+          <div id="progress-bar-fill"></div>
+        </div>
+        <div id="progress-text"></div>
+      </div>
+      <!-- Feedback de acerto/erro: AGORA LOGO ABAIXO DA BARRA DE PROGRESSO -->
+      <div id="feedback"></div>
+      <!-- Quiz -->
+      <div id="quiz" style="display: none"></div>
+      <button id="nextBtn" class="duo-btn" style="display:none;">Próxima</button>
+      <button id="restartBtn" class="duo-btn duo-btn-red" style="display:none;">Reiniciar</button>
+      <button id="quitBtn" class="duo-btn duo-btn-gray" style="display:none;">Desistir</button>
+      <div id="result"></div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
