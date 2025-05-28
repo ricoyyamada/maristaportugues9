@@ -2,51 +2,58 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Among Quiz: Biblioteca Espacial</title>
+  <title>Escape Room Minecraft</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet"/>
+  <meta name="description" content="Escape Room do 9ºF - Tema Minecraft. Teste seus conhecimentos e tente escapar da recuperação com as perguntas preparadas por Valentina, Taíla, Isabela e Antonella. Professor Joelson Beltrão.">
+  <!-- Fonte pixelada estilo Minecraft -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="amongus-bg"></div>
-  <div class="duo-container amongus-container">
+  <div class="duo-container">
     <header>
-      <img src="https://static.wikia.nocookie.net/among-us-wiki/images/9/9a/Red.png" alt="Among Us Red" class="amongus-logo" />
-      <h1><span class="amongus-title">Among Quiz: Biblioteca Espacial</span></h1>
-      <p class="duo-subtitle amongus-subtitle">Figuras de Linguagem - 9º Ano</p>
+      <!-- Se quiser, troque por uma textura de bloco de grama: -->
+      <!-- <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7e/Grass_Block_JE6_BE3.png" alt="Bloco de Grama Minecraft" class="marist-logo" /> -->
+      <img
+        src="https://craal.org.br/wp-content/uploads/2019/07/LOGO-MARISTA-1024x576.jpg"
+        alt="Logo Marista"
+        class="marist-logo"
+      />
+      <h1>Escape Room 9ºF - Minecraft</h1>
+      <p class="duo-subtitle">Professor Joelson Beltrão</p>
     </header>
     <main>
+      <!-- Tela de abertura -->
       <div id="start-screen">
-        <p class="duo-intro amongus-intro">
-          Tripulante, teste seus conhecimentos e escape da nave respondendo as perguntas! Cuidado com os impostores das alternativas!
+        <p class="duo-intro">
+          <span style="font-size:1.5em;">🟩🪓</span><br>
+          Bem-vindo(a) ao Escape Room Minecraft!<br>
+          Valentina, Taíla, Isabela e Antonella desafiam você:<br>
+          Responda todas as perguntas corretamente e escape da recuperação como um verdadeiro explorador!<br>
+          <span style="font-size:1.5em;">⛏️🟫</span>
         </p>
-        <button id="startBtn" class="duo-btn amongus-btn">Começar</button>
+        <button id="startBtn" class="duo-btn">Começar</button>
       </div>
+      <!-- Cronômetro -->
       <div id="timer" style="display: none">
         <span>⏱️</span> <span id="time">00:00</span>
       </div>
+      <!-- Barra de progresso -->
       <div id="progress-bar-container" style="display:none;">
         <div id="progress-bar">
           <div id="progress-bar-fill"></div>
         </div>
         <div id="progress-text"></div>
       </div>
-      <div id="feedback" style="min-height:28px;text-align:center;font-weight:600;margin-bottom:8px;"></div>
+      <!-- Feedback de acerto/erro -->
+      <div id="feedback"></div>
+      <!-- Quiz -->
       <div id="quiz" style="display: none"></div>
-      <button id="nextBtn" class="duo-btn amongus-btn" style="display:none;">Próxima</button>
-      <button id="restartBtn" class="duo-btn amongus-btn-red" style="display:none;">Reiniciar</button>
-      <button id="quitBtn" class="duo-btn amongus-btn-gray" style="display:none;">Desistir</button>
+      <button id="nextBtn" class="duo-btn" style="display:none;">Próxima</button>
+      <button id="restartBtn" class="duo-btn duo-btn-red" style="display:none;">Reiniciar</button>
+      <button id="quitBtn" class="duo-btn duo-btn-gray" style="display:none;">Desistir</button>
       <div id="result"></div>
     </main>
-    <!-- Modal de confirmação para desistir -->
-    <div id="modal-desistir">
-      <div class="modal-content amongus-modal">
-        <img src="https://static.wikia.nocookie.net/among-us-wiki/images/9/9a/Red.png" alt="Among Us Red" style="width:60px; margin-bottom:10px;">
-        <p class="modal-text">Tem certeza que deseja ejetar-se da nave?</p>
-        <button id="btnConfirmarDesistir" class="duo-btn amongus-btn-red" style="margin-bottom:8px;">Sim, desistir</button>
-        <button id="btnCancelarDesistir" class="duo-btn amongus-btn-gray">Cancelar</button>
-      </div>
-    </div>
   </div>
   <script src="script.js"></script>
 </body>
