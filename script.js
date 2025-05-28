@@ -550,8 +550,7 @@ var allQuestions = [
   }
 ];
 
-var questions = []; // será preenchido ao iniciar o quiz
-
+var questions = [];
 var currentQuestion = 0;
 var correctAnswers = 0;
 var selectedOption = null;
@@ -788,18 +787,21 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("nextBtn").onclick = checkAnswer;
   document.getElementById("restartBtn").onclick = restartGame;
 
-  // Novo: mostrar modal ao clicar em "Desistir"
+  // Mostrar modal ao clicar em "Desistir"
   document.getElementById("quitBtn").onclick = function() {
     document.getElementById("modal-desistir").classList.add("active");
+    document.getElementById("modal-desistir").style.display = "flex";
   };
   // Confirmar desistência
   document.getElementById("btnConfirmarDesistir").onclick = function() {
     document.getElementById("modal-desistir").classList.remove("active");
+    document.getElementById("modal-desistir").style.display = "none";
     quitQuiz();
   };
   // Cancelar desistência
   document.getElementById("btnCancelarDesistir").onclick = function() {
     document.getElementById("modal-desistir").classList.remove("active");
+    document.getElementById("modal-desistir").style.display = "none";
   };
 
   showStartScreen();
