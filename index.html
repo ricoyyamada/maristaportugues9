@@ -2,37 +2,36 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Escape Room Minecraft</title>
+  <title>Escape Room </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Escape Room do 9ºF - Tema Minecraft. Teste seus conhecimentos e tente escapar da recuperação com as perguntas preparadas por Valentina, Taíla, Isabela e Antonella. Professor Joelson Beltrão.">
+  <meta name="description" content="Escape Room do 9ºF. Teste seus conhecimentos e tente escapar da recuperação com as perguntas preparadas por Valentina, Taíla, Isabela e Antonella. Professor Joelson Beltrão.">
   <!-- Fonte pixelada estilo Minecraft -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="duo-container">
+  <div class="mc-container">
     <header>
-      <!-- Se quiser, troque por uma textura de bloco de grama: -->
-      <!-- <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7e/Grass_Block_JE6_BE3.png" alt="Bloco de Grama Minecraft" class="marist-logo" /> -->
+      <!-- Bloco de grama Minecraft como logo -->
       <img
-        src="https://craal.org.br/wp-content/uploads/2019/07/LOGO-MARISTA-1024x576.jpg"
-        alt="Logo Marista"
-        class="marist-logo"
+        src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7e/Grass_Block_JE6_BE3.png"
+        alt="Bloco de Grama Minecraft"
+        class="mc-logo"
       />
-      <h1>Escape Room 9ºF - Minecraft</h1>
-      <p class="duo-subtitle">Professor Joelson Beltrão</p>
+      <h1>Escape Room 9ºF</h1>
+      <p class="mc-subtitle">Professor Joelson Beltrão</p>
     </header>
     <main>
       <!-- Tela de abertura -->
       <div id="start-screen">
-        <p class="duo-intro">
+        <p class="mc-intro">
           <span style="font-size:1.5em;">🟩🪓</span><br>
           Bem-vindo(a) ao Escape Room Minecraft!<br>
           Valentina, Taíla, Isabela e Antonella desafiam você:<br>
           Responda todas as perguntas corretamente e escape da recuperação como um verdadeiro explorador!<br>
           <span style="font-size:1.5em;">⛏️🟫</span>
         </p>
-        <button id="startBtn" class="duo-btn">Começar</button>
+        <button id="startBtn" class="mc-btn">Começar</button>
       </div>
       <!-- Cronômetro -->
       <div id="timer" style="display: none">
@@ -49,9 +48,9 @@
       <div id="feedback"></div>
       <!-- Quiz -->
       <div id="quiz" style="display: none"></div>
-      <button id="nextBtn" class="duo-btn" style="display:none;">Próxima</button>
-      <button id="restartBtn" class="duo-btn duo-btn-red" style="display:none;">Reiniciar</button>
-      <button id="quitBtn" class="duo-btn duo-btn-gray" style="display:none;">Desistir</button>
+      <button id="nextBtn" class="mc-btn" style="display:none;">Próxima</button>
+      <button id="restartBtn" class="mc-btn mc-btn-red" style="display:none;">Reiniciar</button>
+      <button id="quitBtn" class="mc-btn mc-btn-gray" style="display:none;">Desistir</button>
       <div id="result"></div>
     </main>
   </div>
