@@ -2,32 +2,25 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Escape Room 9ºF</title>
+  <title>Escape Room Among Us - Figuras de Linguagem</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="duo-container">
+  <div class="amongus-bg"></div>
+  <div class="duo-container amongus-container">
     <header>
-      <img
-        src="https://craal.org.br/wp-content/uploads/2019/07/LOGO-MARISTA-1024x576.jpg"
-        alt="Logo Marista"
-        class="marist-logo"
-      />
-      <h1>Escape Room: Biblioteca Encantada</h1>
-      <p class="duo-subtitle">Quiz de Português do 9º Ano</p>
+      <img src="https://static.wikia.nocookie.net/among-us-wiki/images/9/9a/Red.png" alt="Among Us Red" class="amongus-logo" />
+      <h1><span class="amongus-title">Among Quiz: Biblioteca Espacial</span></h1>
+      <p class="duo-subtitle amongus-subtitle">Figuras de Linguagem - 9º Ano</p>
     </header>
     <main>
       <div id="start-screen">
-        <p class="duo-intro">
-          Bem-vindo(a)! Teste seus conhecimentos e escape da Biblioteca Encantada
-          respondendo todas as perguntas corretamente. Boa sorte!
+        <p class="duo-intro amongus-intro">
+          Tripulante, teste seus conhecimentos e escape da nave respondendo as perguntas! Cuidado com os impostores das alternativas!
         </p>
-        <button id="startBtn" class="duo-btn">Começar</button>
+        <button id="startBtn" class="duo-btn amongus-btn">Começar</button>
       </div>
       <div id="timer" style="display: none">
         <span>⏱️</span> <span id="time">00:00</span>
@@ -40,18 +33,18 @@
       </div>
       <div id="feedback" style="min-height:28px;text-align:center;font-weight:600;margin-bottom:8px;"></div>
       <div id="quiz" style="display: none"></div>
-      <button id="nextBtn" class="duo-btn" style="display:none;">Próxima</button>
-      <button id="restartBtn" class="duo-btn duo-btn-red" style="display:none;">Reiniciar</button>
-      <button id="quitBtn" class="duo-btn duo-btn-gray" style="display:none;">Desistir</button>
+      <button id="nextBtn" class="duo-btn amongus-btn" style="display:none;">Próxima</button>
+      <button id="restartBtn" class="duo-btn amongus-btn-red" style="display:none;">Reiniciar</button>
+      <button id="quitBtn" class="duo-btn amongus-btn-gray" style="display:none;">Desistir</button>
       <div id="result"></div>
     </main>
-
     <!-- Modal de confirmação para desistir -->
     <div id="modal-desistir">
-      <div class="modal-content">
-        <p class="modal-text">Tem certeza que deseja desistir?</p>
-        <button id="btnConfirmarDesistir" class="duo-btn duo-btn-red" style="margin-bottom:8px;">Sim, desistir</button>
-        <button id="btnCancelarDesistir" class="duo-btn duo-btn-gray">Cancelar</button>
+      <div class="modal-content amongus-modal">
+        <img src="https://static.wikia.nocookie.net/among-us-wiki/images/9/9a/Red.png" alt="Among Us Red" style="width:60px; margin-bottom:10px;">
+        <p class="modal-text">Tem certeza que deseja ejetar-se da nave?</p>
+        <button id="btnConfirmarDesistir" class="duo-btn amongus-btn-red" style="margin-bottom:8px;">Sim, desistir</button>
+        <button id="btnCancelarDesistir" class="duo-btn amongus-btn-gray">Cancelar</button>
       </div>
     </div>
   </div>
