@@ -40,13 +40,33 @@ function fraseAleatoria(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-// Função para sortear 20 questões aleatórias do banco de 100
-function getRandomQuestions(allQuestions, n) {
-  let shuffled = allQuestions.slice().sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, n);
+// Função para sortear 20 questões aleatórias do banco de 100, proporcional por resposta correta (5 alternativas)
+function getProportionalRandomQuestions(allQuestions, n) {
+  // Separe as questões por resposta correta (0 a 4)
+  let byAnswer = [[], [], [], [], []];
+  allQuestions.forEach(q => {
+    byAnswer[q.answer].push(q);
+  });
+
+  // Calcule quantas de cada tipo (para 20 questões e 5 alternativas)
+  let base = Math.floor(n / 5);
+  let counts = [base, base, base, base, n - 4 * base];
+  // Exemplo para n=20: [4,4,4,4,4]
+
+  // Sorteie as questões de cada grupo
+  let selected = [];
+  for (let i = 0; i < 5; i++) {
+    let shuffled = byAnswer[i].slice().sort(() => 0.5 - Math.random());
+    selected = selected.concat(shuffled.slice(0, counts[i]));
+  }
+
+  // Embaralhe o resultado final para misturar as respostas
+  selected = selected.sort(() => 0.5 - Math.random());
+
+  return selected;
 }
 
-// Banco de 100 questões (exemplo: as 100 do seu projeto, aqui só as 1-20 e 43-100 para exemplo)
+// Exemplo de banco de questões (adicione até 100, cada uma com 5 alternativas e answer de 0 a 4)
 var allQuestions = [
   {
     question: '"O tempo voa." Qual figura de linguagem está presente?',
