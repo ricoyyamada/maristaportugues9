@@ -570,8 +570,8 @@ var allQuestions = [
   }
 ];
 
-var questions = []; // será preenchido ao iniciar o quiz
-
+// será preenchido ao iniciar o quiz
+var questions = []; 
 var currentQuestion = 0;
 var correctAnswers = 0;
 var selectedOption = null;
