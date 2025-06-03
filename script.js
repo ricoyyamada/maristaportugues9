@@ -570,7 +570,8 @@ var allQuestions = [
   }
 ];
 
-var questions = [];
+var questions = []; // será preenchido ao iniciar o quiz
+
 var currentQuestion = 0;
 var correctAnswers = 0;
 var selectedOption = null;
@@ -636,7 +637,7 @@ function showStartScreen() {
 }
 
 function startQuiz() {
-  questions = getRandomQuestions(allQuestions, 20);
+  questions = getProportionalRandomQuestions(allQuestions, 20);
   document.getElementById("start-screen").style.display = "none";
   document.getElementById("quiz").style.display = "block";
   document.getElementById("result").innerHTML = "";
@@ -807,21 +808,18 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("nextBtn").onclick = checkAnswer;
   document.getElementById("restartBtn").onclick = restartGame;
 
-  // Mostrar modal ao clicar em "Desistir"
+  // Novo: mostrar modal ao clicar em "Desistir"
   document.getElementById("quitBtn").onclick = function() {
     document.getElementById("modal-desistir").classList.add("active");
-    document.getElementById("modal-desistir").style.display = "flex";
   };
   // Confirmar desistência
   document.getElementById("btnConfirmarDesistir").onclick = function() {
     document.getElementById("modal-desistir").classList.remove("active");
-    document.getElementById("modal-desistir").style.display = "none";
     quitQuiz();
   };
   // Cancelar desistência
   document.getElementById("btnCancelarDesistir").onclick = function() {
     document.getElementById("modal-desistir").classList.remove("active");
-    document.getElementById("modal-desistir").style.display = "none";
   };
 
   showStartScreen();
